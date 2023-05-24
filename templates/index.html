@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>{% block title %}KANBAN-HOME{% endblock %}</title>
+    <link rel= "stylesheet" href= "{{ url_for('static',filename='CSS/index.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header class="header-container">
+      <a>KANBAN OFICCE</a>
+        <nav class="navbar">
+          <a href="home">Home</a>
+          <a href="alta">Alta</a>
+          <a href="media">Media</a>
+          <a href="baixa">Baixa</a>
+        </nav>
+    </header>
+    <main class="container-conteudo">
+      <div class="container-atividades">
+        <p class="title">Gerenciador de Atividades KANBAN</p> 
+      </div>
+      <div class="container">
+        <div class="btn-container">
+          <form method='post' action='/home'>
+            <input type="text" placeholder="Nome da Atividade" id="atividade-entrada" name="tarefa" autocomplete="off" required/>
+            <input type="text" placeholder="Descrição da Atividade" id="atividade-descricao" name="conteudo" autocomplete="off" required/>
+            <input list="prioridades" placeholder="Prioridade" id="atividade-prioridade" name="prioridade" autocomplete="off" required/>
+            <datalist id="prioridades">
+              <option value="Alta">
+              <option value="Media">
+              <option value="Baixa">
+            </datalist>
+            <input type="submit" value="Adicionar Atividade" id="adicionar">
+          </form>   
+        </div>
+      </div>
+    </main>
+    {% set mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+            <div id="alerta">
+                {{mensagens[0]}}
+            </div>
+    {% endif %}
+
+  </body>
+</html>

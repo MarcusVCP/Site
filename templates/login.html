@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+    <head>
+        <link rel= "stylesheet" href= "{{ url_for('static',filename='CSS/login.css') }}"
+    </head>
+    <body>
+        <div class="login-container">
+            <h1>Login</h1>
+            <p>KANBAN OFICCE</p>
+            <form method="POST">
+
+              <label for="username">Usuário</label>
+              <input type="text" id="username" name="username" placeholder="Usuário">
+              <label for="password">Senha</label>
+              <input type="password" id="password" name="password" placeholder="Senha">
+              <a class="btn-entrar" href="/home">Entrar</a>
+              <p>Não Tem uma Conta?</p>
+              <a class="btn-cadastro" href="/cadastro">Cadastro</a>
+            </form>
+        </div>
+        <div class="creditos-container">
+            <p>Projeto Integrador - Polo Potim</p>
+        </div>
+    </body>
+</html>  

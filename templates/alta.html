@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>{% block title %}KANBAN-HOME{% endblock %}</title>
+    <link rel= "stylesheet" href= "{{ url_for('static',filename='CSS/index.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header class="header-container">
+      <a>KANBAN OFICCE</a>
+
+      <nav class="navbar">
+        <a href="home">Home</a>
+        <a href="alta">Alta</a>
+        <a href="media">Media</a>
+        <a href="baixa">Baixa</a>
+      </nav>
+    </header>
+
+    <main class="container-conteudo">
+      <div class="container-atividades">
+        <p class="title">Atividades de Prioridade Alta</p> 
+      </div>
+    </main>
+    
+    <div class="container-prioridades">
+      {%for Ativ in Ativ %}
+        {% if Ativ.prioridade == "Alta":%}
+          <p><b>Atividade ID: {{Ativ.id}}</b><a href="{{ url_for('delete', id=Ativ.id)}}" class="material-symbols-outlined" id="delete-icon">delete</a></p>
+          <p>{{ Ativ.tarefa }}</p>
+          <p>{{ Ativ.conteudo }}</p>
+          <br>
+          <br>
+        {% endif %}   
+      {% endfor %}    
+    </div>
+  </body>
+</html>

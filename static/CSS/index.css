@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    text-decoration: none;
+}
+
+div#alerta{
+    color: rgb(194, 0, 0);
+    font-size: 25px;
+    font-family: 'Roboto', Times, serif;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: #ccc;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --text-color: #fff;
+    --main-color: #0f0;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header-container > a{
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    font-size: 1rem;
+    margin-left: 4rem;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 800ms;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar a:hover{
+    color: #069;
+}
+
+.container-conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 12rem;
+    width: 100%;
+}
+
+
+.title {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 4rem;
+    gap: 1rem;
+}
+
+.btn-container a {
+    font-size: 2.3rem;
+    cursor: pointer;
+    transition: 500ms;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.btn-container a:hover {
+    color: #fff;
+    background-color: var(--bg-color);
+}
+
+#atividade-entrada {
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: 500ms;
+}
+
+#atividade-entrada:focus {
+    box-shadow: 0 0 10px #000;
+}
+
+#atividade-descricao {
+    width: 480px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: 500ms;
+}
+
+#atividade-descricao:focus {
+    box-shadow: 0 0 10px #000;
+}
+
+#atividade-prioridade {
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: 500ms;
+}
+
+#adicionar{
+    margin-left: 0.5rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Atividades Prioridade Alta */
+.container-prioridades{
+    width: 100%;
+    text-align: center;
+}
+
+.container-prioridades a {
+    margin-bottom: 1rem;
+}
+
+#delete-icon {
+    text-align: center;
+    margin-left: 1.5%;
+    font-size: 2.2rem;
+    color: var(--bg-color);
+    transition: 600ms ease-in-out;
+}
+
+#delete-icon:hover {
+    color: #f00;
+    transform: scale(1.1);
+}
+
+
+
+

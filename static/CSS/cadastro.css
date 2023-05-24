@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --fg: #c8e3c5;
+    --bg: #9cadca
+}
+
+
+body {
+    background-color: var(--bg);
+}
+
+.signup-container {
+    background-color: var(--fg);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 600ms;
+    font-size: 18px;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.btn-voltar {
+    background-color: #9eaeaa;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    transition: 600ms;
+}
+
+.btn-voltar:hover {
+    background-color: #81876c;
+}
+
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.creditos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creditos-container p{
+    font-size: 18px;
+}
+
